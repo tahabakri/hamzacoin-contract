@@ -9,7 +9,7 @@
 ![Ethers.js](https://img.shields.io/badge/Ethers.js-v6-2535a0)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-This repo is one of three. The others are at [hamzacoin-website](https://github.com/tahabakri/hamzacoin-website) (frontend + backend). All three are independent but work together when you run them end-to-end.
+This repo is one of three. The others are the [frontend](https://github.com/tahabakri/hamzacoin-website) (React + Vite) and the [backend](https://github.com/tahabakri/hamzacoin-backend) (Express + Groq). All three are independent but work together when you run them end-to-end.
 
 ---
 
@@ -44,7 +44,8 @@ Follow this guide and you will have:
 | **HamzaFaucet** | Deployed per-developer — your own copy after Step 2 |
 | **Network** | Sepolia Testnet (chain ID `11155111`) |
 | **Etherscan** | [sepolia.etherscan.io/address/0x619F30ec004442cdc3BE060FC927A3688054e6c3](https://sepolia.etherscan.io/address/0x619F30ec004442cdc3BE060FC927A3688054e6c3) |
-| **Frontend + backend repo** | [github.com/tahabakri/hamzacoin-website](https://github.com/tahabakri/hamzacoin-website) |
+| **Frontend repo** | [github.com/tahabakri/hamzacoin-website](https://github.com/tahabakri/hamzacoin-website) |
+| **Backend repo** | [github.com/tahabakri/hamzacoin-backend](https://github.com/tahabakri/hamzacoin-backend) |
 
 Every HamzaCoin transfer, every claim, every balance is publicly visible on Sepolia Etherscan. That's the whole point of a blockchain — nothing is hidden.
 
@@ -134,8 +135,9 @@ This is a three-piece project. If you're starting from this repo, you still need
 
 ```bash
 # in any working folder (e.g. C:/Users/you/dev/)
-git clone https://github.com/tahabakri/crypto_class.git
+git clone https://github.com/tahabakri/hamzacoin-contract.git
 git clone https://github.com/tahabakri/hamzacoin-website.git
+git clone https://github.com/tahabakri/hamzacoin-backend.git
 ```
 
 After this you should have two folders side by side:
@@ -414,7 +416,6 @@ The faucet contract can be reused without changes — its constructor takes the 
 
 ## Companion repos
 
-- **This repo (contracts)**: [github.com/tahabakri/crypto_class](https://github.com/tahabakri/crypto_class)
-- **Frontend + backend monorepo**: [github.com/tahabakri/hamzacoin-website](https://github.com/tahabakri/hamzacoin-website)
-  - `hamzacoin-react/` — React + Vite + ethers v6 dApp
-  - `hamzacoin-backend/` — Express + Groq + EIP-712 signer
+- **This repo (contracts)**: [github.com/tahabakri/hamzacoin-contract](https://github.com/tahabakri/hamzacoin-contract)
+- **Frontend (React + Vite + ethers v6)**: [github.com/tahabakri/hamzacoin-website](https://github.com/tahabakri/hamzacoin-website)
+- **Backend (Express + Groq + EIP-712 signer)**: [github.com/tahabakri/hamzacoin-backend](https://github.com/tahabakri/hamzacoin-backend)
