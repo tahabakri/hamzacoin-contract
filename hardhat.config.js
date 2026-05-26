@@ -22,10 +22,21 @@ require("dotenv").config();
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
     // ------------------------------------------------------------------------
-    // Solidity compiler version. Must be >= 0.8.20 because OpenZeppelin v5
-    // requires it.
+    // Solidity compiler version.
+    // OpenZeppelin v5's newer files (EIP712, MessageHashUtils, Strings, Bytes)
+    // require ^0.8.24. HamzaCoin.sol's `pragma ^0.8.20` is forward-compatible
+    // with 0.8.24, so it still compiles unchanged.
+    //
+    // evmVersion: "cancun" — OpenZeppelin's Bytes.sol uses the `mcopy` opcode,
+    // which only exists from the Cancun hard fork onwards. Sepolia mainnet has
+    // been on Cancun since the Dencun upgrade in March 2024, so this is safe.
     // ------------------------------------------------------------------------
-    solidity: "0.8.20",
+    solidity: {
+        version: "0.8.24",
+        settings: {
+            evmVersion: "cancun",
+        },
+    },
 
     // ------------------------------------------------------------------------
     // Networks Hardhat knows how to talk to.
